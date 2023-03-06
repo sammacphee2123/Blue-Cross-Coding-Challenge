@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e74166c.css",
-    "main.js": "/static/js/main.23c695a9.js",
-    "index.html": "/index.html",
-    "main.3e74166c.css.map": "/static/css/main.3e74166c.css.map",
-    "main.23c695a9.js.map": "/static/js/main.23c695a9.js.map"
+    "main.css": "/medavie-blue-cross-coding-challenge/static/css/main.3e74166c.css",
+    "main.js": "/medavie-blue-cross-coding-challenge/static/js/main.4deb4129.js",
+    "index.html": "/medavie-blue-cross-coding-challenge/index.html",
+    "main.3e74166c.css.map": "/medavie-blue-cross-coding-challenge/static/css/main.3e74166c.css.map",
+    "main.4deb4129.js.map": "/medavie-blue-cross-coding-challenge/static/js/main.4deb4129.js.map"
   },
   "entrypoints": [
     "static/css/main.3e74166c.css",
-    "static/js/main.23c695a9.js"
+    "static/js/main.4deb4129.js"
   ]
 }
