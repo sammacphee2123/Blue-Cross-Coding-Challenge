@@ -2,12 +2,14 @@ import { useState, useEffect} from 'react';
 import { useParams, } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router'
 
 const RecipeDetails = () => {
     const [details, setDetails] = useState([]);
-    const healthInfo = ["No", "No", "No", "No"];
+    const [vegan, setVegan] = useState("No");
+    const [vegetarian, setVegetarian] = useState("No");
+    const [dairyFree, setDairyFree] = useState("No");
+    const [glutenFree, setGlutenFree] = useState("No");
     const params = useParams();//The selected recipe to query for details.
     const navigate = useNavigate()
 
@@ -37,16 +39,16 @@ const RecipeDetails = () => {
 
     const storeHealthInfo = () => {
       if (details.vegan) {
-        healthInfo[0] = ("Yes");
+        setVegan("Yes");
       }
       if (details.vegetarian) {
-        healthInfo[1] = ("Yes");
+        setVegetarian("Yes");
       }
       if (details.dairyFree) {
-        healthInfo[2] = ("Yes");
+        setDairyFree("Yes");
       }
       if(details.glutenFree) {
-        healthInfo[3] = ("Yes");
+        setGlutenFree("Yes");
       }
     }
 
@@ -62,10 +64,10 @@ const RecipeDetails = () => {
             
             <h1>{details.title}</h1>
             <h2>Health Information:</h2>
-            <h3>Vegan: {healthInfo[0]}</h3>
-            <h3>Vegetarian: {healthInfo[1]}</h3>
-            <h3>Dairy Free: {healthInfo[2]}</h3>
-            <h3>Gluten Free: {healthInfo[3]}</h3>
+            <h3>Vegan: {vegan}</h3>
+            <h3>Vegetarian: {vegetarian}</h3>
+            <h3>Dairy Free: {dairyFree}</h3>
+            <h3>Gluten Free: {glutenFree}</h3>
           </Grid>
           <Grid item xs={6} paddingLeft={5} paddingTop={5}>
             <img src={details.image} alt={details.title} />
@@ -73,7 +75,7 @@ const RecipeDetails = () => {
           
           <Grid item xs={12} paddingLeft={5} paddingRight={5} paddingBottom={5}>
             <h2>Ingredients: </h2>
-            {/* This is causing the appication to crash due to details being undefined
+            {/*
             <ul>
               {details.extendedIngredients.map(({ id, original }) => (
                 <li key={id}>{original}</li>

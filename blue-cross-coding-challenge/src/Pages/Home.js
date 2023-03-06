@@ -21,7 +21,7 @@ const Home = () => {
     function getRecipes() {
         //Query the spoonacular API to get a list of all recipes that match user input through search bar and cuisine selection
         fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=b700f5c1e3de4335996681d44b999fe1&number=10&query=${query}&cuisine=${selectedCuisine}}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=b700f5c1e3de4335996681d44b999fe1&number=50&query=${query}&cuisine=${selectedCuisine}}`
         )
           .then((response) => response.json())
           .then(data => {
