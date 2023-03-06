@@ -10,7 +10,7 @@ import Pages from './Pages/Pages';
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header/>
       <Pages/>
     </BrowserRouter>  
