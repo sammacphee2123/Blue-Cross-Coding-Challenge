@@ -1,0 +1,27 @@
+.searchBar {
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-right: 12px;
+    margin: 5px;
+}
+
+.filter {
+    padding-left: 12px;
+    padding-top: 12px;
+    margin: 5px;
+}
+
+.button {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.results {
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-right: 24px;
+    margin: 5px;
+}
